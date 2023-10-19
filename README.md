@@ -12,6 +12,10 @@
 - Options du run : -i pour connecter le clavier et -t pour ouvrir un terminal  
 - Lister les containers : docker ps  
 - Quitter un container : exit ou ctrl+d
+- Stopper un service : gitlab-ctl stop nginx
+- Vérifier l'état d'un service : gitlab-ctl status  
+- Démarrer un service : gitlab-ctl start nginx  
+- Redémarrer l'ensemble des services : gitlab-ctl restart
 
 ## Backup
 - Lien vers la doc backup : https://docs.gitlab.com/omnibus/settings/backups.html  
@@ -28,3 +32,4 @@
 - cd nginx/  
 - gitlab-access.log  
 - gitlab-error.log
+
