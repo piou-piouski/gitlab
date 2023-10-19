@@ -16,9 +16,9 @@ Lance un docker : docker run hello-world
 
 Options du run : -i pour connecter le clavier et -t pour ouvrir un terminal
 
-Permet d'ouvrir un shell dans un container : docker exec -it idContainer sh
+Lister les containers : docker ps
 
-Permet de lister les 10 derniers log du container : docker logs --teil 10 idContainer
+Quitter un container : exit ou ctrl+d
 
 ## Backup
 Lien vers la doc backup : https://docs.gitlab.com/omnibus/settings/backups.html
@@ -26,3 +26,14 @@ Lien vers la doc backup : https://docs.gitlab.com/omnibus/settings/backups.html
 Permet de générer un backup du container : docker exec -t idContainer gitlab-backup
 
 Permet d'ajouter les fichiers secret : docker exec -t idContainer /bin/sh -c 'gitlab-ctl backup-etc && cd /etc/gitlab/config_backup && cp $(ls -t | head -n1) /secret/gitlab/backups/'
+
+## Logs
+Permet d'ouvrir un shell dans un container : docker exec -it idContainer bash
+Permet de lister les process avec leurs status : gitlab-ctl status
+
+### Logs de gitlab
+docker inspect idContainer
+cd /srv/gitlab/logs
+cd nginx/
+gitlab-access.log
+gitlab-error.log
