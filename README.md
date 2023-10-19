@@ -33,6 +33,7 @@
 - Ajout d'un groupe : curl --request POST --header "Authorization: Bearer glpat-5-xW5WL3HpDUL7Jw938e" --header "Content-Type: application/json" --data '{"path":"mon-groupe", "name":"Mon-Groupe"}' "http://localhost/api/v4/groups"
 
 ## Backup
-- Lien vers la doc backup : https://docs.gitlab.com/omnibus/settings/backups.html  
+- Lien vers la doc backup : https://docs.gitlab.com/omnibus/settings/backups.html
+- Lien vers la doc backup : https://docs.gitlab.com/ee/administration/backup_restore/  
 - Permet de générer un backup du container : docker exec -t idContainer gitlab-backup  
-- Permet d'ajouter les fichiers secret : docker exec -t idContainer /bin/sh -c 'gitlab-ctl backup-etc && cd /etc/gitlab/config_backup && cp $(ls -t | head -n1) /secret/gitlab/backups/'
+- Permet de restore un backup : docker exec -t idContainer gitlab-backup restore  
