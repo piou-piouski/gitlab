@@ -28,7 +28,7 @@ Permet de générer un backup du container : docker exec -t idContainer gitlab-b
 Permet d'ajouter les fichiers secret : docker exec -t idContainer /bin/sh -c 'gitlab-ctl backup-etc && cd /etc/gitlab/config_backup && cp $(ls -t | head -n1) /secret/gitlab/backups/'
 
 ## Logs
-Permet d'ouvrir un shell dans un container : docker exec -it idContainer bash
+Permet d'ouvrir un shell dans un container : docker exec -it idContainer bash  
 Permet de lister les process avec leurs status : gitlab-ctl status
 
 ### Logs de gitlab
