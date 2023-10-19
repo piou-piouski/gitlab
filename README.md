@@ -46,3 +46,12 @@
 - sudo yum install gitlab-runner
 - lister les runners : sudo nano /etc/gitlab-runner/config.toml  
 - Depuis le gitLab -> CI/CD -> Runners  
+
+## DockerFile
+- nano Dockerfile  
+FROM alpine  
+
+CMD ["echo", "Hello World"]  
+- docker build -t hello .
+- docker images
+- docker run hello  
