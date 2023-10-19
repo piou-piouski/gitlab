@@ -3,7 +3,9 @@
 - Chaine youtube : Qu'est-ce que tu GEEKes ?  
 - Outil : bisect  
 - https://git.goffinet.org/  
-- GitLab peut servir de registry pour Docker
+- GitLab peut servir de registry pour Docker  
+- Reset password : gitlab-rake "gitlab:password:reset[root]"
+- echo $?
 
 # docker
 - Lance un docker : docker run hello-world  
@@ -36,4 +38,11 @@
 - Lien vers la doc backup : https://docs.gitlab.com/omnibus/settings/backups.html
 - Lien vers la doc backup : https://docs.gitlab.com/ee/administration/backup_restore/  
 - Permet de générer un backup du container : docker exec -t idContainer gitlab-backup  
-- Permet de restore un backup : docker exec -t idContainer gitlab-backup restore  
+- Permet de restore un backup : docker exec -t idContainer gitlab-backup restore
+
+## Runner
+- Lien vers la doc : https://docs.gitlab.com/runner/install/linux-repository.html
+- curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh" | sudo bash
+- sudo yum install gitlab-runner
+- lister les runners : sudo nano /etc/gitlab-runner/config.toml  
+- Depuis le gitLab -> CI/CD -> Runners  
