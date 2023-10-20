@@ -56,3 +56,11 @@ CMD ["echo", "Hello World"]
 - Permet de lister les images docker : docker images  
 - Permet de lancer une image 'hello' version 1, de la run : docker run hello:V1
 - Permet de push une image docker vers le registry sur gitlab : docker push hello  
+
+## Install gitlab runner in the docker
+- docker volume create gitlab-runner-config
+- docker run -d --name gitlab-runner --restart always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v gitlab-runner-config:/etc/gitlab-runner \
+    gitlab/gitlab-runner:latest
+
