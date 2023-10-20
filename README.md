@@ -69,4 +69,3 @@ CMD ["echo", "Hello World"]
 
 ## Install nginx
 - docker pull nginx \
-
