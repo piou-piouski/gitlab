@@ -6,7 +6,9 @@
 - https://git.goffinet.org/  
 - GitLab peut servir de registry pour Docker  
 - Reset password : gitlab-rake "gitlab:password:reset[root]"
-- echo $?
+- echo $?  
+- terraform => opentofu (fork de terraform)
+- Template de .gitlab-ci.yml : https://gitlab.com/gitlab-org/gitlab-foss/-/tree/master/lib/gitlab/ci/templates
 
 # docker
 - Lance un docker : docker run hello-world  
