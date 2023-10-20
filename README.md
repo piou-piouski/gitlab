@@ -58,9 +58,15 @@ CMD ["echo", "Hello World"]
 - Permet de push une image docker vers le registry sur gitlab : docker push hello  
 
 ## Install gitlab runner in the docker
-- docker volume create gitlab-runner-config
+- Doc : https://docs.gitlab.com/runner/install/docker.html#option-1-use-local-system-volume-mounts-to-start-the-runner-container \
 - docker run -d --name gitlab-runner --restart always \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v gitlab-runner-config:/etc/gitlab-runner \
-    gitlab/gitlab-runner:latest
+  -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  gitlab/gitlab-runner:latest \
+- docker exec -it gitlab-runner bash \
+- gitlab-runner register \
+
+
+## Install nginx
+- docker pull nginx \
 
