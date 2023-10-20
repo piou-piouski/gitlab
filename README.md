@@ -1,6 +1,7 @@
 # gitlab
 - Formateur : thomas Saquet (thomas@solution-libre.fr)  
-- Chaine youtube : Qu'est-ce que tu GEEKes ?  
+- Chaine youtube : Qu'est-ce que tu GEEKes ?
+- GitHub : https://github.com/tsaquet/gitlab  
 - Outil : bisect  
 - https://git.goffinet.org/  
 - GitLab peut servir de registry pour Docker  
