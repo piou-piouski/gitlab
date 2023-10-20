@@ -69,3 +69,10 @@ CMD ["echo", "Hello World"]
 
 ## Install nginx
 - docker pull nginx \
+
+## Créer une image nginx
+- nano imageDocker/nginx/Dockerfile  
+- FROM nginx  
+  COPY static-html-directory /usr/share/nginx/html
+- cd imageDocker/nginx/Dockerfile  
+- docker build -t nginx .  
